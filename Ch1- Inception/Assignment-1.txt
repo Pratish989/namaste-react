@@ -1,0 +1,47 @@
+1) What is Emmet?
+- “Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”
+
+And Emmet does fulfill what they promise, you can use short expressions to generate HTML markup, CSS.
+
+
+Examples - ! - html doctype boilerplate
+
+div{This is a div} - <div> This is a div </div>
+ul>li
+
+
+
+2) Difference between a Library and Framework?
+-Both libraries and frameworks are reusable code written by someone else. Their purpose is to help you solve common problems in easier ways.
+
+-The technical difference between a framework and library lies in a term called inversion of control.
+
+- When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library. When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+
+- The programmer calls the library where and when they need it.
+
+3) What is CDN? Why do we use it?
+
+-CDN stands for Content Delivery Network. It is a distributed network of servers strategically placed in various locations around the world. The primary purpose of a CDN is to deliver web content, such as images, videos, JavaScript files, CSS stylesheets, and other static assets, to users quickly and efficiently.
+
+4) Why is React known as React?
+- React is called "React" because of its core feature, which is its ability to "react" or respond dynamically to changes in data.
+The name "React" also reflects the fact that the library is built around the concept of a unidirectional data flow, where changes in data flow down through the component hierarchy, triggering updates and re-renders as necessary.
+
+
+5)What is crossorigin in script tag?
+- The crossorigin attribute is used in the HTML <script> tag to control how the browser handles the loading and execution of external scripts hosted on different domains. This attribute is important for security and allows websites to fetch resources from other origins while preventing potential security risks like cross-origin attacks.
+
+-The crossorigin attribute is especially relevant when loading scripts from a different domain to protect against potential security vulnerabilities. Using the appropriate crossorigin attribute ensures that the browser enforces cross-origin policies correctly, helping to keep your website secure and maintaining the integrity of user data.
+
+
+6)What is diference between React and ReactDOM
+- React is a JavaScript library for building user interfaces. It provides a set of tools and components that enable developers to create reusable UI components and manage the state of a web application efficiently
+
+- ReactDOM is a specific package within the React ecosystem, and it serves as the bridge between React and the actual DOM in the browser. It provides the necessary methods to render React components into the browser, update them when the state changes, and handle events efficiently.
+
+
+
+7)What is difference between react.development.js and react.production.js files via CDN?
+
+- The production version will be optimized in a few ways--smaller file size by minimizing variable names and removing white space, etc--whereas the development version will remain readable, might include source maps, etc., making it better for debugging and development usage. Functionally they're the same

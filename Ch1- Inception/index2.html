@@ -1,0 +1,28 @@
+<!-- Build your first Hello World program using,
+Using JS to manipulate the DOM -->
+
+<!-- I haven't used any external scripts for this -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML using JS DOM</title>
+  </head>
+  <body>
+    <script>
+      const heading = document.createElement("h1");
+
+      heading.innerHTML = "Hello World!";
+
+      heading.style.textAlign = "center";
+
+      heading.style.backgroundColor = " blue ";
+
+      heading.style.color = " white ";
+
+      document.body.appendChild(heading);
+    </script>
+  </body>
+</html>
