@@ -1,0 +1,98 @@
+1) What is NPM?
+
+NPM – or "Node Package Manager" – is the default package manager for JavaScript's runtime Node.js.
+
+For a more visual explanation, we can think of the repository npmjs.com as a fulfillment center that receives packages of goods from sellers (npm package authors) and distributes these goods to buyers (npm package users).
+
+Every Project of js has a npm package with its own package information and its package.json job to describe the project.
+
+package.json will be generated when npm init is run to initialise a JavaScript/Node.js project
+
+2) dependencies vs devDependencies
+
+- These two come in form of key-value objects with npm libraries' names as the key and their semantic-formatted versions as the value
+
+example:-
+
+{
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.0",
+    "@typescript-eslint/parser": "^2.22.0",
+    "@zeit/ncc": "^0.21.1",
+    "eslint": "^6.8.0",
+    "eslint-plugin-github": "^3.4.1",
+    "eslint-plugin-jest": "^23.8.2",
+    "jest": "^25.1.0",
+    "jest-circus": "^25.1.0",
+    "js-yaml": "^3.13.1",
+    "prettier": "^1.19.1",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  }
+}
+
+
+All of these exact package versions will be documented in a generated package-lock.json file.
+
+package-lock.json
+This file describes the exact versions of the dependencies used in an npm JavaScript project. If package.json is a generic descriptive label, package-lock.json is an ingredient table.
+
+
+
+3)What is a bundler in React? Why do we need it?
+
+A bundler in React is a tool that allows developers to package their code into a single file or bundle. This bundle can then be used to run the application in the browser. Bundlers are used to reduce the size of the code and improve the performance of the application. Common bundlers used with React are Webpack and Parcel.
+
+In other words, a bundler is a tool that helps you manage the dependencies and assets of your React application, and package them into a single file (or a few files) that can be served to the browser.
+
+4)What is parcel.cache?
+
+cache folder (or . parcel-cache in parcel v2) stores information about your project when parcel builds it, so that when it rebuilds, it doesn't have to re-parse and re-analyze everything from scratch. It's a key reason why parcel can be so fast in development mode.
+
+(WE DONT COMMIT IT TO GIT, BECAUSE IT STORES UNNECCESARY DATA OF OUR PROJECT.)
+
+
+5) What is NPX?
+-NPX stands for Node Package eXecute. It is simply an NPM package runner. It allows developers to execute any Javascript Package available on the NPM registry without even installing it
+
+6) What is Tree Shaking?
+-Tree shaking is a term commonly used within a JavaScript context to describe the removal of dead code.
+
+It relies on the import and export statements to detect if code modules are exported and imported for use between JavaScript files.
+
+In modern JavaScript applications, we use module bundlers (e.g., webpack or Rollup) to automatically remove dead code when bundling multiple JavaScript files into single files. This is important for preparing code that is production ready, for example with clean structures and minimal file size.
+
+
+
+7) What is .gitignore? What should we add and not add into it?
+
+- The . gitignore file tells Git which files to ignore when committing your project to the GitHub repository.
+
+- System-specific files
+System-specific files need to get ignored. But, you can add these files to a global ignore file instead of the repo’s ignore file.
+
+Vscode workspaces
+Items like a vscode workspace need to be ignored.
+
+Security and API keys/secrets
+For security, the security key files and API keys should get added to the gitignore. (That is, if they’re even stored in the directory). Every commit is recorded in the history of a GitHub repo. If a key is submitted, even if it is taken down immediately after, a record of the key exists in that commit.
+
+
+
+8) What is dist folder?
+
+The /dist folder contains the minimized version of the source code. The code present in the /dist folder is actually the code which is used on production web applications. Along with the minified code, the /dist folder also comprises of all the compiled modules that may or may not be used with other systems.
+
+9)What is browserlists
+
+- Browserslist defines and shares the list of target browsers between various frontend build tools
+- Browserslist is a tool that allows specifying which browsers should be supported in your frontend app by specifying "queries" in a config file.
+
+
+10)
+
