@@ -1,0 +1,172 @@
+when we want to change a title on clicking a button. we cannot do this with normal variaables provided by javascript or react.
+
+in this case we have to use state variables which maintains the state and it helps in 
+reconciliation and in virtual DOM
+
+
+- For using state variable we need to import useState  from react
+
+
+How to declare a state variable?
+
+
+for that we have to understand normal variable synatx 
+
+const title = "Food Villa"
+
+
+// state variable
+
+
+const [variablename, function] = useState("Initial Value")
+
+const [title, setTitle] = useState("Food Villa") // title variable has Food Villa Value
+
+
+
+now onclicking the button we want to change the button
+
+for that -
+<h1> {title} </h1>
+<button onCLick = {()=> setTitle("New Food App")}> Change title </button>
+
+
+
+
+
+
+
+
+fetch() we use to fetch API 
+
+
+there are two ways to load a page 
+
+1) loads -> API(300ms time it takes) -> render page(500 ms)
+// in this we will first call the API  and then it will laod the page
+
+2) loads -> renders a template page(100 ms) -> API (300ms) -> update UI
+// in this we will first render the template page ui and then do a API call
+
+
+for 2nd option we have useEffect given by React Devs
+
+
+
+
+
+// NOTE
+there are two times when a component renders
+
+- either the state changes 
+- or props changes
+
+
+
+useEffect:- 
+what is useEffect? a hook
+what is a hook? a normal js function
+
+how do you call it? we pass two parameters 1. callback functions and 2. dependency array
+
+
+example syntax
+
+useEffect(()=>{
+
+console.log("render")
+
+}, [])
+
+// this will call again and again so we pass a dependency array to it 
+
+// in dependent array if we pass anthing, lets say searchText then the useEffect function will be dependent on it
+
+// empty dependency array => once after render
+// dependencies array [searchText] => once after render + eveery time after render
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- when we try to fetch some data from swiggy API it will give us error(CORS Error)
+- It is given by our erro. It says that  we cant let you connect to swiggy api with local host. 
+- So for that we have install a extension called allow cors
+
+
+
+
+
+
+
+
+- we use shimmer ui for  page content loading
+
+
+
+
+
+// conditional rendering
+
+
+meaning- if the data is there then load one ui and if not then load a different ui 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
