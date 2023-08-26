@@ -1,0 +1,139 @@
+useEffect is used when the component is rendered.
+
+
+- if we dont pass anything as an array than it will print after every render
+ex- 
+useEffect(()=>{
+console.log("useEfffect")
+})  // in this every time a component is rendered then it will print useEffect
+
+
+ex- 
+
+useEffect(()=>{
+console.log("useEffect")
+}, []) // in this only once this will print 
+
+
+
+- dont create a component inside a component (it renders again)
+
+
+- never write useState inside a if else loop, for loop
+
+
+- do not write useState outside the functional component 
+
+
+
+-createBrowserRouter helps us creating appRouter
+
+const appRouter = createBrowserRouter([
+   {
+  path: "/", 
+  element: <AppLayout/>
+  },
+  {
+    path:"/about",
+    element: <About/>
+  }
+])
+
+- RouterProvider will render all the things we have given to appRouter
+
+root.render(<RouterProvider router={appRouter}/>);
+
+
+
+
+- errorElement and error component
+
+{
+  path: "/", 
+  element: <AppLayout/> , // element needed to  be rendered
+  errorElement : <Error/>
+  },
+
+
+
+
+
+SPA - Single Page Application
+
+
+There are two types of routing 
+1) client side routing
+-in this no network request is sent. 
+- we dont want anything to load on the server
+
+
+2) server side routing 
+
+
+
+we will use {Link} given by react router dom.
+it helps us redirect the path and without reloading 
+
+ex- 
+
+<Link to="/about">
+<li> About </li>
+</Link>
+
+NOTE - if we want to put anchor tag in our page then we wont use the a tag .
+ we will use the Link given by react router
+
+
+
+
+
+
+
+- if you want to create nested routes you have to use Outlet given react router dom
+- all the children will go into outlet according to the route
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- DYNAMIC URL 
+
+how to read a dynamic URL
+
+const {id} = useParams();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

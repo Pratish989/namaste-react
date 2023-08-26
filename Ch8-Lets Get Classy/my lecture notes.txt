@@ -1,0 +1,145 @@
+Class-Based Component - at the end of the it is just normal javascript classes.
+
+import React from 'react';
+
+
+SYNTAX
+class Profile extends React.Component{}  // React.Component comes from React, we have to import React
+
+
+render(){                 // Main thing of class based component is the render() method
+  return <h1>Profile Class Component </h1>
+}      
+
+
+
+render() will have JSX      
+
+
+ProfileClass.js code
+
+import React from 'react';
+class Profile extends React.Component{
+render(){                
+  return <h1>Profile Class Component </h1>
+}      
+}   
+
+export default Profile;       
+
+
+
+
+
+constructor(props){
+super(props);
+}
+
+you will get props by using this.props
+for name - this.props.name
+
+
+
+React  Life Cycle 
+
+
+first the constructor() will call
+then 
+second the render() will call
+then
+componentDidMount() will call 
+
+
+React  Life Cycle Methods
+
+componentDidMount() is similar to useEffect
+
+and we have to make API call inside the componentDidMount()
+
+WHy?
+
+because it loads after the render
+
+
+console.log ki sequence kya hogi?
+
+
+Code dekhlena video se 
+
+sequence
+
+Parent Constructor
+
+Parent Render  // ab is render() function me Profile class hai toh woh call hogi
+
+
+Child Constructor
+
+Child Render
+
+Child ComponentDidMount
+
+Parent ComponentDidMount
+
+
+
+
+
+UNRELATED - (JSX TO HTML - BABEL HELPS IN THIS)
+
+
+Commom LifeCycle
+
+
+There are genreally two phases when reconciliation is happening
+
+1) Render Phase
+2) Commit Phase 
+
+
+
+
+
+
+WHen there are two child how the rendering looks like?
+
+
+
+
+Parent Constructor
+
+Parent Render 
+
+First Child Constructor
+
+First Child Render
+
+Second Child Constructor
+
+Second Child Render
+
+First Child componentDidMount
+
+Second Child componentDidMount
+
+Parent componentDidMount
+
+
+
+Why it is not rendering the componentDidMount first?
+
+Because in react life cycle the render phase occurs the first. 
+And in that it tries to render all the Childs first and then it commit phase all the componentDidMount is rendered
+
+
+
+
+
+
+
+componentDidUpdate() - it will be called after every next render
+
+
+
+componentWillUnMount() - it will be rendered when we go to some other page (when the component will unmount)
+
